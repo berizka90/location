@@ -1,34 +1,39 @@
-package entity;
+package com.example.location.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@Entity
+
 public class IpLocation {
-    private Integer IPv4;
-    private String canonicalIPv4Representation;
-    @Column(name = "city_name")
-    private String cityName;
-    @Column (name = "country_code")
-    private String countryCode;
-    @Column (name = "country_name" )
-    private String countryName;
-    @Column (name = "region_name")
-    private String regionName;
-    @Column (name = "latitude")
-    private Double latitude;
-    @Column (name = "longitude")
-    private Double longitude;
 
-    public IpLocation() {
+    private String canonicalIPv4Representation="54";
+
+    private String IPv4="134744072";
+
+    private String cityName="Mountain View";
+
+    private String countryCode="US";
+
+    private String countryName="United States";
+
+    private String regionName="California";
+
+    private Double latitude=37.405992;
+
+    private Double longitude=-122.078515;
+
+     IpLocation() {
     }
 
+
+
 /** add getter and setter*/
-    public Integer getIPv4() {
+   String getIPv4() {
         return IPv4;
     }
 
-    public void setIPv4(Integer IPv4) {
+    public void setIPv4(String IPv4) {
         this.IPv4 = IPv4;
     }
 
