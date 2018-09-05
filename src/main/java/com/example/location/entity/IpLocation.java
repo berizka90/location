@@ -7,9 +7,9 @@ import javax.persistence.Id;
 
 public class IpLocation {
 
-    private String canonicalIPv4Representation="54";
+    private String canonicalIPv4Representation="677.899.1.7";
 
-    private String IPv4="134744072";
+    private String IPv4="67789917";
 
     private String cityName="Mountain View";
 
