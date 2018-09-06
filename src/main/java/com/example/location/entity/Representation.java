@@ -13,18 +13,16 @@ public class Representation  {
     private String cityName;
     private Double latitude;
     private Double longitude;
-
-    Representation(String IP4, String ip4Cunonical, Optional<IpLocation> ip) {
-        cityName=ip.get().getCityName();
-        this.IP4=IP4;
-        this.Ip4Cunonical=ip4Cunonical;
-        this.countryCode=ip.get().getCountryCode();
-        this.regionName=ip.get().getRegionName();
-        this.latitude=ip.get().getLatitude();
-        this.longitude=ip.get().getLongitude();
-        this.contryName=ip.get().getCountryCode();
-        this.cityName=ip.get().getCityName();
-
+/** This is wraper that return data from database in apropriate view*/
+   Representation(String IP4, String ip4Cunonical, Optional<IpLocation> ip) {
+       this.IP4=IP4;
+       this.Ip4Cunonical=ip4Cunonical;
+       ip.ifPresent(city->setCityName(city.getCityName()));
+       ip.ifPresent(country->setCountryCode(country.getCountryCode()));
+       ip.ifPresent(region->setRegionName(region.getRegionName()));
+       ip.ifPresent(latitude->setLatitude(latitude.getLatitude()));
+       ip.ifPresent(longitude->setLongitude(longitude.getLongitude()));
+       ip.ifPresent(country->setContryName(country.getCountryName()));
     }
 
     /** add getter and setter*/
