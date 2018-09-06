@@ -21,7 +21,8 @@ public class IpLocationService {
         .forEach(list::add);
         return list;
     }
-
+/** get String as request parameter parse
+ * @return Representation result from database in Json format */
     public Representation getIploc(String ip){
 
         Integer ip4= Integer.parseInt(ip.replaceAll("\\.", ""));
