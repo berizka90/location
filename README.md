@@ -1,4 +1,4 @@
-<h2>This is a project that, at the request of an Ip address,</b>
+<h2>This is a project that, at the request of an IpV4 address,</b>
 out of the database gives the city, country and geographic coordinates.</h2>
 In order to run the project you need to install MySQL DataBase.
 By the link: https://lite.ip2location.com/database/ip-country-region-city-latitude-longitude
