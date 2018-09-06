@@ -21,10 +21,12 @@ public class IpLocationService {
         .forEach(list::add);
         return list;
     }
-    public Optional<IpLocation> getIploc(String ip){
+
+    public Representation getIploc(String ip){
 
         Integer ip4= Integer.parseInt(ip.replaceAll("\\.", ""));
-
-      return   ipLocationRepo.findIpFromTo(ip4,ip4);
+        Optional<IpLocation> location=ipLocationRepo.findIpFromTo(ip4);
+        Representation rep=new Representation(ip4.toString(),ip,location);
+      return  rep;
     }
 }

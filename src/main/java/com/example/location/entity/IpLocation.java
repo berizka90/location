@@ -8,35 +8,23 @@ import javax.persistence.Table;
 @Entity
 @Table(name="ip2location_db5")
 public class IpLocation {
-//
-//    private String canonicalIPv4Representation="677.899.1.7";
-//
-//    private String IPv4="67789917";
-//
-//    private String cityName="Mountain View";
-//
-//    private String countryCode="US";
-//
-//    private String countryName="United States";
-//
-//    private String regionName="California";
-//
-//    private Double latitude=37.405992;
-//
-//    private Double longitude=-122.078515;
-
      IpLocation() {
     }
     @Id
 private Integer ip_from;
 private Integer ip_to;
-private String country_code;
-private String country_name;
-private String region_name;
-private String city_name;
+@Column(name = "country_code")
+private String countryCode;
+@Column(name = "country_name")
+private String countryName;
+@Column(name = "region_name")
+private String regionName;
+@Column(name = "city_name")
+private String cityName;
 private Double latitude;
 private Double longitude;
 
+    /** add getter and setter*/
 
     public Integer getIp_from() {
         return ip_from;
@@ -54,41 +42,37 @@ private Double longitude;
         this.ip_to = ip_to;
     }
 
-    public String getCountry_code() {
-        return country_code;
+    public String getCountryCode() {
+        return countryCode;
     }
 
-    public void setCountry_code(String country_code) {
-        this.country_code = country_code;
+    public void setCountryCode(String countryCode) {
+        this.countryCode = countryCode;
     }
 
-    public String getCountry_name() {
-        return country_name;
+    public String getCountryName() {
+        return countryName;
     }
 
-    public void setCountry_name(String country_name) {
-        this.country_name = country_name;
+    public void setCountryName(String countryName) {
+        this.countryName = countryName;
     }
 
-    public String getRegion_name() {
-        return region_name;
+    public String getRegionName() {
+        return regionName;
     }
 
-    public void setRegion_name(String region_name) {
-        this.region_name = region_name;
+    public void setRegionName(String regionName) {
+        this.regionName = regionName;
     }
 
-    public String getCity_name() {
-        return city_name;
+    public String getCityName() {
+        return cityName;
     }
 
-    public void setCity_name(String city_name) {
-        this.city_name = city_name;
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
-
-    /** add getter and setter*/
-
-
 
     public Double getLatitude() {
         return latitude;
