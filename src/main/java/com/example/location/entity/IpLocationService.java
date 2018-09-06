@@ -25,6 +25,6 @@ public class IpLocationService {
 
         Integer ip4= Integer.parseInt(ip.replaceAll("\\.", ""));
 
-      return   ipLocationRepo.findById(ip4);
+      return   ipLocationRepo.findIpFromTo(ip4,ip4);
     }
 }
