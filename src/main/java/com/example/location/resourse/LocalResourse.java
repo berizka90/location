@@ -4,6 +4,7 @@ import com.example.location.entity.IpLocation;
 import com.example.location.entity.IpLocationService;
 import com.example.location.entity.Representation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -21,7 +22,7 @@ public class LocalResourse {
     public List<IpLocation> getAll(){
     return locationService.getAllList();
 }
-@RequestMapping("/geoip/{ip}")
+@RequestMapping(value = "/geoip/{ip}", produces = MediaType.APPLICATION_JSON_VALUE)
 public Representation getIpV4(@PathVariable String ip){
     return locationService.getIploc(ip);
 

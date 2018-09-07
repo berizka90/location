@@ -7,10 +7,12 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 
+import static com.example.location.repository.SqlStatmentConstant.SELECT_FROM_TO_ID;
+
 public interface IpLocationRepo extends CrudRepository<IpLocation,Integer> {
-    @Query(value = "SELECT * FROM ip2location_db5 t where t.ip_from <=:frim  AND t.ip_to>:frim",
+    @Query(value = SELECT_FROM_TO_ID,
             nativeQuery=true)
-     Optional<IpLocation> findIpFromTo( @Param("frim") Integer fr);
+     Optional<IpLocation> findIpFromTo( @Param("base") Integer fr);
 
 
 }

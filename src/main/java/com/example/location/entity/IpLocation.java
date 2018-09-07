@@ -1,9 +1,13 @@
 package com.example.location.entity;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.swing.text.View;
 
 @Entity
 @Table(name="ip2location_db5")
@@ -13,8 +17,7 @@ public class IpLocation {
     @Id
 private Integer ip_from;
 private Integer ip_to;
-@Column(name = "country_code")
-private String countryCode;
+
 @Column(name = "country_name")
 private String countryName;
 @Column(name = "region_name")
@@ -23,6 +26,8 @@ private String regionName;
 private String cityName;
 private Double latitude;
 private Double longitude;
+@Column(name = "country_code")
+private String countryCode;
 
     /** add getter and setter*/
 
