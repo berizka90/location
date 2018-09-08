@@ -14,6 +14,4 @@ public interface IpLocationRepo extends CrudRepository<IpLocation, Long> {
     @Query(value = SELECT_FROM_TO_ID,
             nativeQuery = true)
     Optional<IpLocation> findIpFromTo(@Param("base") Long fr) throws NotSuchIpV4InDatabase;
-
-
 }
