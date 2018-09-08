@@ -5,15 +5,15 @@ By the link: https://lite.ip2location.com/database/ip-country-region-city-latitu
 you need to download the <b>IPV4 SCV</b> file, unzip it and put it in the project's root folder. 
 Next, connect to the database login: root, password: root, and run the script <b>DataBase_creation_script.sql.</b>
 In order to view all entries in the database, you must run the project with the parameters: http: // localhost: 8080 / geoip. 
-To get the ip address information http: // localhost: 8080 / geoip / {ip} where {ip} for example 192.0.2.235 is IPV4 address</p>
+To get the ip address information http: // localhost: 8080 / geoip / {ip} where {ip} for example 1.8.8.8 is IPV4 address</p>
 The output is:
 {
-  "countryCode" : "PH",
-  "contryName" : "Philippines",
-  "regionName" : "National Capital Region",
-  "cityName" : "Makati",
-  "latitude" : 14.55027,
-  "longitude" : 121.03269,
-  "ip4" : "19202235",
-  "ip4Cunonical" : "192.0.2.235"
+ "countryCode" : "CN",
+  "contryName" : "China",
+  "regionName" : "Beijing",
+  "cityName" : "Beijing",
+  "latitude" : 39.9075,
+  "longitude" : 116.39723,
+  "ip4" : "17303560",
+  "ip4Cunonical" : "1.8.8.8"
 }
