@@ -2,7 +2,7 @@ package com.example.location.entity;
 
 import java.util.Optional;
 
-public class Representation  {
+public class Representation {
     private String IP4;
     private String Ip4Cunonical;
     private String countryCode;
@@ -13,19 +13,24 @@ public class Representation  {
     private String cityName;
     private Double latitude;
     private Double longitude;
-/** This is wraper that return data from database in apropriate view*/
-   Representation(String IP4, String ip4Cunonical, Optional<IpLocation> ip) {
-       this.IP4=IP4;
-       this.Ip4Cunonical=ip4Cunonical;
-       ip.ifPresent(city->setCityName(city.getCityName()));
-       ip.ifPresent(country->setCountryCode(country.getCountryCode()));
-       ip.ifPresent(region->setRegionName(region.getRegionName()));
-       ip.ifPresent(latitude->setLatitude(latitude.getLatitude()));
-       ip.ifPresent(longitude->setLongitude(longitude.getLongitude()));
-       ip.ifPresent(country->setContryName(country.getCountryName()));
+
+    /**
+     * This is wraper that return data from database in apropriate view
+     */
+    Representation(String IP4, String ip4Cunonical, Optional<IpLocation> ip) {
+        this.IP4 = IP4;
+        this.Ip4Cunonical = ip4Cunonical;
+        ip.ifPresent(city -> setCityName(city.getCityName()));
+        ip.ifPresent(country -> setCountryCode(country.getCountryCode()));
+        ip.ifPresent(region -> setRegionName(region.getRegionName()));
+        ip.ifPresent(latitude -> setLatitude(latitude.getLatitude()));
+        ip.ifPresent(longitude -> setLongitude(longitude.getLongitude()));
+        ip.ifPresent(country -> setContryName(country.getCountryName()));
     }
 
-    /** add getter and setter*/
+    /**
+     * add getter and setter
+     */
 
     public String getIP4() {
         return IP4;

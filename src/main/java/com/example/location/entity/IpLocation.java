@@ -1,49 +1,51 @@
 package com.example.location.entity;
 
-import com.fasterxml.jackson.annotation.JsonView;
-import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.swing.text.View;
+
 
 @Entity
-@Table(name="ip2location_db5")
+@Table(name = "ip2location_db5")
 public class IpLocation {
-     IpLocation() {
+    IpLocation() {
     }
+
     @Id
-private Integer ip_from;
-private Integer ip_to;
+    private Long ip_from;
+    private Long ip_to;
 
-@Column(name = "country_name")
-private String countryName;
-@Column(name = "region_name")
-private String regionName;
-@Column(name = "city_name")
-private String cityName;
-private Double latitude;
-private Double longitude;
-@Column(name = "country_code")
-private String countryCode;
+    @Column(name = "country_name")
+    private String countryName;
+    @Column(name = "region_name")
+    private String regionName;
+    @Column(name = "city_name")
+    private String cityName;
+    private Double latitude;
+    private Double longitude;
+    @Column(name = "country_code")
+    private String countryCode;
 
-    /** add getter and setter*/
+    /**
+     * add getter and setter
+     */
 
-    public Integer getIp_from() {
+    public Long getIp_from() {
         return ip_from;
     }
 
-    public void setIp_from(Integer ip_from) {
+    public void setIp_from(Long ip_from) {
         this.ip_from = ip_from;
     }
 
-    public Integer getIp_to() {
+    public Long getIp_to() {
         return ip_to;
     }
 
-    public void setIp_to(Integer ip_to) {
+    public void setIp_to(Long ip_to) {
         this.ip_to = ip_to;
     }
 
