@@ -28,9 +28,10 @@ public class IpLocation {
     private String regionName;
     @Column(name = "city_name")
     private String cityName;
-    private Double latitude;
-    private Double longitude;
     @Column(name = "country_code")
     private String countryCode;
+    private Double latitude;
+    private Double longitude;
+
 
 }

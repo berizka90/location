@@ -19,7 +19,7 @@ public class Representation {
     private Double longitude;
 
     /**
-     * This is wraper that return data from database in apropriate view
+     * This is wrapper that return data from database in appropriate view
      */
     Representation(String IP4, String ip4Cunonical, Optional<IpLocation> ip) {
         this.IP4 = IP4;

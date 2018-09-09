@@ -9,14 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
-
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
 import java.util.List;
 
-
+@ControllerAdvice
 @RestController
-public class LocalResourse {
+public class LocalResourse  {
+
     @Autowired
     private IpLocationService locationService;
 
@@ -26,7 +24,10 @@ public class LocalResourse {
     }
 
     @RequestMapping(value = "/geoip/{ip}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public @ResponseBody Representation getIpV4(@PathVariable String ip) throws NotApropriateFormatExeption, NotSuchIpV4InDatabase {
+    public @ResponseBody Representation getIpV4(@PathVariable String ip)
+            throws NotApropriateFormatExeption, NotSuchIpV4InDatabase {
         return locationService.getIploc(ip);
     }
+
+
 }
